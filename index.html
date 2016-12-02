@@ -29,8 +29,42 @@
 		      programming</h2>
 		      <h1 class='fragment'>Let's do it
 			<span class='bkg'>right</span></h1>
-		      <h2 class='fragment'><code>@jjmerelo</code> | <code>JMERELO@cpan.org</code></section>
-			
+		      <h2 class='fragment'><code>@jjmerelo</code> |
+			<code>JMERELO@cpan.org</code></h2>
+
+		    </section>
+
+		    <section>
+
+		      <section>
+			<pre><code>object MaxOnes extends Function1[Vector[Boolean],Double]
+       with Fitness[Vector[Boolean],Double] {
+
+  def Fitness( ev: Vector[Boolean]):Double = 
+    ev.foldRight(0.0)((a:Boolean,b:Double) 
+      => if (a == true) b+1 else b )
+
+  def apply(v1: Vector[Boolean]): Double = Fitness( v1 )
+
+}</code></pre>
+		      <aside class='notes'>You probably can understand
+			this even if you don't have formal education in Scala</aside>
+		      </section>
+
+		      <section>
+			<pre><code>onemax :: Seq Bool -> Int
+onemax v = 
+    Data.Foldable.foldl (\y -> (\x -> if x then y+1 else y)) 0 v
+</code></pre>
+
+			<aside class='notes'>You can't probably figure
+			out this one... but maybe you should. It's
+			functional, pretty few formal learning
+			includes functional. That's why maybe, just
+			maybe, you, and me, and everyone, needs a new
+			  way of doing this.</aside>
+		      </section>
+
 		  </div>
 		</div>
 
