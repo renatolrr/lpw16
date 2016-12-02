@@ -42,6 +42,11 @@ section[data-background] h3 {
 }
 .credits li { font-size:0.75em }
 
+.reveal h1 em {
+    font-family: Lobster, sans-serif;
+    font-size: 1.1em;
+    background-color: rgba(0,0,0,0.7);
+}
 
 .chart div {
   font: 30px sans-serif;
