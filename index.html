@@ -1,53 +1,55 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Teaching programming as if it were 2016</title>
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/moon.css">
+    <link rel="stylesheet" href="css/extra.css">
+    
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
 
-		<title>Teaching programming as if it were 2016</title>
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
-		<link rel="stylesheet" href="css/extra.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-	  <div class="reveal">
-	    <div class="slides">
-	      <section><h2>Teaching/learning
-		  programming</h2>
-		<h1 class='fragment'>Let's do it
-		  <span class='bkg'>right</span></h1>
-		<h2 class='fragment'><code>@jjmerelo</code> |
-		  <code>JMERELO@cpan.org</code></h2>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	
+	<section><h2>Teaching/learning
+	    programming</h2>
+	  <h1 class='fragment'>Let's do it
+	    <span class='bkg'>right</span></h1>
+	  <h2 class='fragment'><code>@jjmerelo</code> |
+	    <code>JMERELO@cpan.org</code></h2>
 		
-	      </section>
+	</section>
 	      
-	      <section>
-		<img src='img/everysingle.png' alt='faking till you make it'>
-	      </section>
+	<section>
+	  <img src='img/everysingle.png' alt='faking till you make it'>
+	</section>
 	      
-	      <section>
-		<section>
-		  <h1>Change is <em>nigh</em></h1>
-		</section>
+	<section>
+	  <section>
+	    <h1>Change is <em>nigh</em></h1>
+	  </section>
+	  
+	  <section>
+	    <h1>(Programming) Languages all look the same</h1>
+	  </section>
 		
-		<section>
-		  <h1>Languages look the same</h1>
-		</section>
-		
-		<section>
+	  <section>
 		  <pre><code>object MaxOnes extends Function1[Vector[Boolean],Double]
        with Fitness[Vector[Boolean],Double] {
 
@@ -58,54 +60,57 @@
   def apply(v1: Vector[Boolean]): Double = Fitness( v1 )
 
 }</code></pre>
-		      <aside class='notes'>You probably can understand
+		  <aside class='notes'>You probably can understand
 			this even if you don't have formal education in Scala</aside>
-		      </section>
+	  </section>
 
-		      <section>
-			<pre><code>onemax :: Seq Bool -> Int
+	  <section>
+	    <pre><code>onemax :: Seq Bool -> Int
 onemax v = 
     Data.Foldable.foldl (\y -> (\x -> if x then y+1 else y)) 0 v
 </code></pre>
 
-			<aside class='notes'>You can't probably figure
-			out this one... but maybe you should. It's
-			functional, pretty few formal learning
-			includes functional. That's why maybe, just
-			maybe, you, and me, and everyone, needs a new
-			  way of doing this.</aside>
-		      </section>
+	    <aside class='notes'>You can't probably figure
+	      out this one... but maybe you should. It's
+	      functional, pretty few formal learning
+	      includes functional. That's why maybe, just
+	      maybe, you, and me, and everyone, needs a new
+	      way of doing this.</aside>
+	  </section>
 
-		      <section><h1>They have a <em>finite</em> lifespan</h1>
-			<aside class='notes'>Even a single language will change and evolve and sometimes even stop looking the same</aside></section>
+	  <section><h1>They have a <em>finite</em> lifespan</h1>
+	    <aside class='notes'>Even a single language will change and evolve and sometimes even stop looking the same</aside></section>
+	  
+	  <section><h1><em>Never</em> stop learning</h1>
+	    <aside class='notes'>So it's good if have a head start</aside>
+	  </section>
 
-		      <section><h1><em>Never</em> stop learning</h1>
-			<aside class='notes'>So it's good if have a head start</aside>
-		      </section>
-		    </section>
+	  <section><h1><em>Surrender</em> to change</h1></section>
+	  
+	</section>
 
-		    <section>
-		      <section><h1><em>Real</em> tasks</h1></section>
-		      <section><h1><em>Real</em> code</h1></section>
-		      <section><h1><em>Any</em> language</h1></section>
-		      <section><h1>Embrace the <em>Internet</em></h1></section>
-		      <section><h1>Stand in the shoulders of giants</h1></section>
-		      <section><h1><em>Empower </em>the user</h1></section>
-		      <section><h1>There is no <em>true</em> paradigm</h1>
-			<h2 class='fragment'>But functional looks pretty awesome</h2></section>
+	<section>
+	  <section><h1><em>Real</em> tasks</h1></section>
+	  <section><h1><em>Real</em> code</h1></section>
+	  <section><h1><em>Any</em> language</h1></section>
+	  <section><h1>Embrace the <em>Internet</em></h1></section>
+	  <section><h1>Stand in the shoulders of giants</h1></section>
+	  <section><h1><em>Empower </em>the user</h1></section>
+	  <section><h1>There is no <em>true</em> paradigm</h1>
+	    <h2 class='fragment'>But functional looks pretty awesome</h2></section>
+	  
+	  <section><h1>Teach <em>ecosystems</em></h1></section>
+	  <section><h1>Softwaree has <em>free</em> in it</h1></section>
+	</section>	
+	
+	<section>
+	  <section><h1>Why would anyone want to follow this manifesto?</h1></section>
+	  <section><h1>Go full stack</h1>
+	    <h2 class='fragment'>And full event queue, full log, full datastore, full *</h2>
+	  </section>
 
-		      <section><h1>Teach <em>ecosystems</em></h1></section>
-		      <section><h1>Softwaree has <em>free</em> in it</h1></section>
-		    </section>	
-
-		    <section>
-		      <section><h1>Why would anyone want to follow this manifesto?</h1></section>
-		      <section><h1>Go full stack</h1>
-			<h2 class='fragment'>And full event queue, full log, full datastore, full *</h2>
-		      </section>
-
-		      <section><h1><em>Polyglot</em> is the norm</h1>
-			<aside class='note'>Maybe it's always been, only we didn't have a word to call it</aside>
+	  <section><h1><em>Polyglot</em> is the norm</h1>
+	    <aside class='note'>Maybe it's always been, only we didn't have a word to call it</aside>
 		      </section>
 		      <section><h1>Hit the ground running</h1></section>
 
